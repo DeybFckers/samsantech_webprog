@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbers | Barrons Barbershop</title>
+    <link rel="stylesheet" href="barber.css">
+    <script src="barber.js" defer></script>
+</head>
+<body>
+    <!-- Sidebar Menu -->
+    <div id="sidebar" class="sidebar">
+        <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+        <a href="../home page/home.html">Home</a>
+        <a href="../customer/customer.html">Customers</a>
+        <a href="barber.html" class="active">Barbers</a>
+        <a href="../services/services.html">Services</a>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="menu-container">
+            <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+            <div class="logo">Barrons Barbershop</div>
+        </div>
+    </nav>
+
+    <!-- Add Barber Modal -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Add New Barber</h2>
+            <form id="addForm">
+                <label for="barberName">Barber Name:</label>
+                <input type="text" id="barberName" required>
+
+                <label for="barberAddress">Address:</label>
+                <input type="text" id="barberAddress" required>
+
+                <label for="barberPhone">Phone:</label>
+                <input type="text" id="barberPhone" required>
+
+                <button type="submit" class="add-btn">+ Add Barber</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <h1 class="page-title">Barber Management</h1>
+
+        <div class="table-container">
+            <div class="table-header">
+                <input type="text" placeholder="Search..." class="search-bar">
+                <button type="button" id="openModal" class="add-btn">+ Add Barber</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="barber-table">
+                    <!-- Rows will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

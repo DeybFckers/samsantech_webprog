@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: white;
+    color: #222;
+    transition: margin-left 0.4s;
+}
+
+/* Sidebar (Push Effect) */
+.sidebar {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #ff5733;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Sidebar Active */
+.sidebar.open {
+    width: 200px;
+}
+
+/* Push Effect for Main Content */
+body.sidebar-open {
+    margin-left: 200px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 30px;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Menu + Logo */
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    font-size: 28px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff5733;
+}
+
+/* Main Content */
+#main-content {
+    transition: margin-left 0.4s;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero h2 {
+    font-size: 24px;
+    color: gray;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.contact-info {
+    font-size: 18px;
+    margin: 20px 0;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+.contact-info img {
+    width: 22px; 
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.contact-info a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.why-choose-btn {
+    padding: 12px 20px;
+    border: 2px solid black;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.why-choose-btn:hover {
+    background: black;
+    color: white;
+}
+
+/* Image */
+.hero-image img {
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 120px 0;
+}
+
+.service {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service:hover {
+    transform: scale(1.1);
+}
+
+.service img {
+    width: 80px; /* Increased icon size */
+    margin-bottom: 15px;
+}
+
+.service p {
+    font-size: 24px; /* Bigger text */
+    font-weight: 700; /* Bolder text */
+    color: #222;
+}
+
+.more-btn {
+    padding: 12px 24px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.more-btn:hover {
+    background: #ff5733;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 90%;
+        height: auto;
+    }
+}

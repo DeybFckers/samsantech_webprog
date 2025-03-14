@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Barrons Barbershop</title>
+    <link rel="stylesheet" href="services.css">
+    <script src="services.js" defer></script>
+</head>
+<body>
+    <!-- Sidebar Menu -->
+    <div id="sidebar" class="sidebar">
+        <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+        <a href="../home page/home.html">Home</a>
+        <a href="../customer/customer.html">Customers</a>
+        <a href="../barber/barber.html">Barbers</a>
+        <a href="services.html" class="active">Services</a>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="menu-container">
+            <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+            <div class="logo">Barrons Barbershop</div>
+        </div>
+    </nav>
+
+    <!-- Add Service Modal -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Add New Service</h2>
+            <form id="addForm">
+                <label for="serviceName">Service Name:</label>
+                <input type="text" id="serviceName" required>
+
+                <label for="servicePrice">Price:</label>
+                <input type="number" id="servicePrice" required>
+
+                <label for="serviceType">Type:</label>
+                <input type="text" id="serviceType" required>
+
+                <button type="submit" class="add-btn">+ Add Service</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <h1 class="page-title">Service Management</h1>
+
+        <div class="table-container">
+            <div class="table-header">
+                <input type="text" placeholder="Search..." class="search-bar">
+                <button type="button" id="openModal" class="add-btn">+ Add Service</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Type</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="services-table">
+                    <!-- Rows will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers | Barrons Barbershop</title>
+    <link rel="stylesheet" href="customer.css">
+    <script src="customer.js" defer></script>
+</head>
+<body>
+    <!-- Sidebar Menu -->
+    <div id="sidebar" class="sidebar">
+        <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+        <a href="../home page/home.html">Home</a>
+        <a href="customer.html" class="active">Customers</a>
+        <a href="../barber/barber.html">Barbers</a>
+        <a href="../services/services.html">Services</a>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="menu-container">
+            <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+            <div class="logo">Barrons Barbershop</div>
+        </div>
+    </nav>
+
+    <!-- Add Customer Modal -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Add New Customer</h2>
+            <form id="addForm">
+                <label for="customerName">Customer Name:</label>
+                <input type="text" id="customerName" required>
+
+                <label for="customerPhone">Phone:</label>
+                <input type="text" id="customerPhone" required>
+
+                <label for="customerBarber">Barber:</label>
+                <select id="customerBarber" required>
+                    <option value="">Select Barber</option>
+                </select>
+
+                <label for="customerService">Service:</label>
+                <select id="customerService" required>
+                    <option value="">Select Service</option>
+                </select>
+
+
+                <button type="submit" class="add-btn">+ Add Customer</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <h1 class="page-title">Customer Management</h1>
+
+        <div class="table-container">
+            <div class="table-header">
+                <input type="text" placeholder="Search..." class="search-bar">
+                <button type="button" id="openModal" class="add-btn">+ Add Customer</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Barber</th>
+                        <th>Service</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="customer-table">
+                    <!-- Rows will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
